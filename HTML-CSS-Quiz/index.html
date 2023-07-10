@@ -23,14 +23,93 @@
         <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
             <section role="region" aria-labelledby="student-info">
                 <h2 id="student-info">Student Info</h2>
+                <div class="info">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                <div class="info">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email">
+                </div>
+                <div class="info">
+                    <label for="birthday">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+                    <input id="birthday" name="birthday" type="date">
+                </div>
             </section>
             <section role="region" aria-labelledby="html-questions">
                 <h2 id="html-questions">HTML Questions</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question" name="q1">
+                        <legend>H1 is a larger size text than H2</legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" id="q1-a1" name="q1" value="true">
+                                    True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2">
+                                    <input type="radio" id="q1-a2" name="q1" value="false">
+                                    False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question" name="q2">
+                        <legend>A head section is visible to a person viewing the Web page.</legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1">
+                                    <input id="q2-a1"" name="q2" type="radio" value="true">
+                                    True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q2-a2">
+                                    <input type="radio" id="q2-a2" name="q2" value="false">
+                                    False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>                   
+                </div>
             </section>
             <section role="region" aria-labelledby="css-questions">
                 <h2 id="css-questions">CSS Questions</h2>
+                <div class="formrow">
+                    <div class="question-block">
+                        <label for="q3-a1">Does CSS stands for Computer Style Sheets?</label>
+                    </div>
+                    <div class="answer">
+                        <select name="q3" id="q3-a1" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="q3-a2">How do you add a background color for all h1 elements?</label>
+                    </div>
+                    <div class="answer">
+                        <textarea name="q3" id="q3-a2" cols="30" rows="10" placeholder="selector{property:value}"></textarea>
+                    </div>
+                </div>
             </section>
+            <button type="submit">Send</button>
         </form>
     </main>
+    <footer>
+        <address>
+           <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+            San Francisco<br />
+            California<br />
+            USA
+        </address>
+    </footer>
 </body>
 </html>
